@@ -15,7 +15,8 @@ public class MainActivity extends AppCompatActivity {
     // Componentes del juego: boton y resultado
     private Button buttonPlay;
     private TextView result;
-
+    private String lostMessage="Perdiste";
+    private String wonMessage="Ganaste";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -41,9 +42,9 @@ public class MainActivity extends AppCompatActivity {
     }
     protected void setResultMessage(boolean hasWon){
         if (hasWon){
-            result.setText("Ganaste!!! :)");
+            result.setText(wonMessage);
 
         }
-        else result.setText("Proba de nuevo!! :(");
+        else result.setText(lostMessage);
     }
 }
